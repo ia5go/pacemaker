@@ -79,7 +79,8 @@
       navigator.geolocation.watchPosition(
         function (position) {
           var speed = position.coords.speed || 0;
-          speedElement.textContent = speed.toFixed(2) * 3.6 + " km/h";
+          let currentSpeed = speed * 3.6; //convertendo para km/h
+          speedElement.textContent = currentSpeed.toFixed(2) + " km/h";
 
           if (speed * 3.6 > 12) {
             // Convert m/s to km/h
