@@ -82,7 +82,7 @@
           let currentSpeed = speed * 3.6; //convertendo para km/h
           speedElement.textContent = currentSpeed.toFixed(2) + " km/h";
 
-          if (speed * 3.6 > 12) {
+          if (speed * 3.6 > 12 || speed * 3.6 < 6) {
             // Convert m/s to km/h
             // Uncomment the next line if you want to automatically trigger speech
             speechSynthesis.speak(speech);
